@@ -136,7 +136,7 @@ if test "$ADDUSER" = "y" -o "$REPLY" = "Y"; then
     else
         pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
         useradd -m -p $pass -s /bin/zsh $username
-        usermod -G www-data,aegir,sudo $username
+        usermod -G www-data,sudo $username
 
         [ $? -eq 0 ] && echo -e "\n${BLD}${RED} Create Additional Account $username ${BLD}${GREEN}| Done!${RESET}\n" || echo -e "\nFailed to add another user!"
     fi
