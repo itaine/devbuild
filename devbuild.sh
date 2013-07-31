@@ -88,7 +88,7 @@ aptitude install -y \
 aptitude install -y python-software-properties python g++ make
 add-apt-repository ppa:chris-lea/node.js
 aptitude update
-aptitude install -y nodejs npm
+aptitude install -y nodejs
 echo -e "\n${BLD}${RED} Install Packages ${BLD}${GREEN}| Done!${RESET}\n"
 
 
