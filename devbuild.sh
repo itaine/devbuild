@@ -80,11 +80,15 @@ echo -e "\n${BLD}${RED} Update System ${BLD}${GREEN}| Done!${RESET}\n"
 
 # Install Packages
 aptitude install -y \
-	build-essential git-core zip zsh safe-rm trash-cli \
-	nodejs npm ruby-full rubygems1.8
+	build-essential git-core zip zsh safe-rm trash-cli ruby-full rubygems1.8
 
 	gem install sass
 	gem install compass
+
+aptitude install -y python-software-properties python g++ make
+add-apt-repository ppa:chris-lea/node.js
+aptitude update
+aptitude install -y nodejs npm
 echo -e "\n${BLD}${RED} Install Packages ${BLD}${GREEN}| Done!${RESET}\n"
 
 
@@ -111,6 +115,12 @@ echo -e "\n${BLD}${RED} Configure SSH ${BLD}${GREEN}| Done!${RESET}\n"
 update_hosts >> /etc/hosts
 DEV_HOST=`uname -n`
 echo -e "\n${BLD}${RED} Configure DNS ${BLD}${GREEN}| Done!${RESET}\n"
+
+
+
+# Configure srv dir
+chgrp www-data /srv
+chmod -R 775 /srv
 
 
 
