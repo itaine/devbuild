@@ -153,10 +153,9 @@ if test "$ADDUSER" = "y" -o "$REPLY" = "Y"; then
     echo -e "\nOnly root may add a user to the system"
   fi
 else
-  echo -e "\nProceeding..."
+  echo -e "\n"
 fi
-echo -e "\n${BLD}${RED} Post Aegir Build ${BLD}${GREEN}| Done!${RESET}\n"
-
+echo -e "\n${BLD}${RED} Dev Build ${BLD}${GREEN}| Done!${RESET}\n"
 
 
 
