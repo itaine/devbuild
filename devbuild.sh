@@ -83,7 +83,7 @@ aptitude install -y \
 	build-essential git-core zip zsh safe-rm trash-cli update-motd \
 	python-software-properties python g++ make
 
-add-apt-repository ppa:chris-lea/node.js
+add-apt-repository -y ppa:chris-lea/node.js
 aptitude update
 aptitude install -y nodejs
 npm install -g express nodemon
@@ -128,7 +128,7 @@ chmod -R 775 /srv
 
 # Create Additional Account
 echo -n -e "\Create a user account? [y/n] "
-read -N ADDUSER
+read -N 1 ADDUSER
 if test "$ADDUSER" = "y" -o "$REPLY" = "Y"; then
   if [ $(id -u) -eq 0 ]; then
     echo -e "\n"
