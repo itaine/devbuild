@@ -86,7 +86,7 @@ aptitude install -y \
 add-apt-repository -y ppa:chris-lea/node.js
 aptitude update
 aptitude install -y nodejs
-npm install -g express nodemon
+npm install -g express nodemon jshint
 echo -e "\n${BLD}${RED} Install Packages ${BLD}${GREEN}| Done!${RESET}\n"
 
 
