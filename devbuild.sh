@@ -80,9 +80,9 @@ echo -e "\n${BLD}${RED} Update System ${BLD}${GREEN}| Done!${RESET}\n"
 
 # Install Packages
 aptitude install -y \
-	build-essential git-core zip zsh safe-rm trash-cli
+	build-essential git-core zip zsh safe-rm trash-cli update-motd \
+	python-software-properties python g++ make
 
-aptitude install -y python-software-properties python g++ make
 add-apt-repository ppa:chris-lea/node.js
 aptitude update
 aptitude install -y nodejs
