@@ -6,7 +6,7 @@ A script to assist in building a node.js development server.
 
 ## LAUNCH
 
-curl -O https://raw.github.com/itaine/devbuild/master/devbuild.sh && chmod 700 devbuild.sh && ./devbuild.sh
+    curl -O https://raw.github.com/itaine/devbuild/master/devbuild.sh && chmod 700 devbuild.sh && ./devbuild.sh
 
 ## POST LAUNCH MANUAL PROCEDURES
 
