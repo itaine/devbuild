@@ -81,7 +81,7 @@ echo -e "\n${BLD}${RED} Update System ${BLD}${GREEN}| Done!${RESET}\n"
 # Install Packages
 aptitude install -y \
 	build-essential git-core zip zsh safe-rm trash-cli \
-	python-software-properties python g++ make vim
+	python-software-properties python g++ make golang
 
 add-apt-repository -y ppa:chris-lea/node.js
 aptitude update
