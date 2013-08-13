@@ -81,7 +81,11 @@ echo -e "\n${BLD}${RED} Update System ${BLD}${GREEN}| Done!${RESET}\n"
 # Install Packages
 aptitude install -y \
 	build-essential git-core zip zsh safe-rm trash-cli \
-	python-software-properties python g++ make golang
+	python-software-properties python g++ make golang \
+	ruby-full rubygems1.8
+
+	gem install sass
+	gem install compass
 
 add-apt-repository -y ppa:chris-lea/node.js
 aptitude update
