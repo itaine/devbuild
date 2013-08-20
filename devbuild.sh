@@ -72,6 +72,8 @@ read -p "Enter hostname: " newhostname
 
 
 # Update System
+add-apt-repository -y ppa:chris-lea/node.js
+add-apt-repository -y ppa:pi-rho/dev
 aptitude update
 aptitude full-upgrade -y
 echo -e "\n${BLD}${RED} Update System ${BLD}${GREEN}| Done!${RESET}\n"
@@ -82,15 +84,12 @@ echo -e "\n${BLD}${RED} Update System ${BLD}${GREEN}| Done!${RESET}\n"
 aptitude install -y \
 	build-essential git-core zip zsh safe-rm trash-cli \
 	python-software-properties python g++ make golang \
-	ruby-full rubygems1.8 htop
+	ruby-full rubygems1.8 nmon nodejs tmux
 
-	gem install sass
-	gem install compass
+gem install sass
+gem install compass
 
-add-apt-repository -y ppa:chris-lea/node.js
-aptitude update
-aptitude install -y nodejs
-npm install -g express nodemon jshint bower
+npm install -g express nodemon bower jshint
 echo -e "\n${BLD}${RED} Install Packages ${BLD}${GREEN}| Done!${RESET}\n"
 
 
