@@ -84,7 +84,7 @@ echo -e "\n${BLD}${RED} Update System ${BLD}${GREEN}| Done!${RESET}\n"
 aptitude install -y \
 	build-essential git-core zip zsh safe-rm trash-cli \
 	python-software-properties python g++ make golang \
-	ruby-full rubygems1.8 nmon nodejs tmux
+	ruby-full rubygems1.8 nmon nodejs tmux csstidy
 
 gem install sass
 gem install compass
