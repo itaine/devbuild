@@ -89,7 +89,7 @@ aptitude install -y \
 gem install sass
 gem install compass
 
-npm install -g express nodemon bower jshint
+npm install -g express nodemon bower jshint stylus
 echo -e "\n${BLD}${RED} Install Packages ${BLD}${GREEN}| Done!${RESET}\n"
 
 
