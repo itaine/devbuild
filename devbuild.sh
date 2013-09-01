@@ -86,7 +86,7 @@ aptitude install -y \
 	python-software-properties python g++ make golang \
 	ruby-full rubygems1.8 nmon nodejs tmux csstidy
 
-gem install sass
+# Compass installs SASS as well.
 gem install compass
 
 npm install -g express nodemon bower jshint stylus
