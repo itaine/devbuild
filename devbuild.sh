@@ -89,7 +89,8 @@ aptitude install -y \
 # Compass installs SASS as well.
 gem install compass
 
-npm install -g express nodemon bower jshint stylus
+npm install -g yo express nodemon grunt-cli bower jshint stylus \
+	generator-webapp generator-angular
 echo -e "\n${BLD}${RED} Install Packages ${BLD}${GREEN}| Done!${RESET}\n"
 
 
