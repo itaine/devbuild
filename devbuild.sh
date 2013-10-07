@@ -89,7 +89,7 @@ aptitude install -y \
 # Install Ruby Gems
 gem install compass zurb-foundation
 
-npm install -g express nodemon grunt-cli bower jshint stylus
+npm install -g express nodemon grunt-cli bower jshint stylus http-server
 echo -e "\n${BLD}${RED} Install Packages ${BLD}${GREEN}| Done!${RESET}\n"
 
 
@@ -133,30 +133,30 @@ chmod -R 775 /srv
 echo -n -e "\Create a user account? [y/n] "
 read -N 1 ADDUSER
 if test "$ADDUSER" = "y" -o "$REPLY" = "Y"; then
-  if [ $(id -u) -eq 0 ]; then
-    echo -e "\n"
-    read -p "Enter username : " username
-    echo
-    read -s -p "Enter password : " password
-    echo -e "\n"
+	if [ $(id -u) -eq 0 ]; then
+		echo -e "\n"
+		read -p "Enter username : " username
+		echo
+		read -s -p "Enter password : " password
+		echo -e "\n"
 
-    egrep "^$username" /etc/passwd >/dev/null
+		egrep "^$username" /etc/passwd >/dev/null
 
-    if [ $? -eq 0 ]; then
-        echo -e "\n$username exists!"
-    else
-        pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
-        useradd -m -p $pass -s /bin/zsh $username
-        usermod -G www-data,sudo $username
+		if [ $? -eq 0 ]; then
+				echo -e "\n$username exists!"
+		else
+				pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
+				useradd -m -p $pass -s /bin/zsh $username
+				usermod -G www-data,sudo $username
 
-        [ $? -eq 0 ] && echo -e "\n${BLD}${RED} Create Additional Account $username ${BLD}${GREEN}| Done!${RESET}\n" || echo -e "\nFailed to add another user!"
-    fi
+				[ $? -eq 0 ] && echo -e "\n${BLD}${RED} Create Additional Account $username ${BLD}${GREEN}| Done!${RESET}\n" || echo -e "\nFailed to add another user!"
+		fi
 		su -s /bin/bash $username -c 'cd ~ && curl -O https://raw.github.com/zshtopia/zshtopia/master/.aux/install.sh && chmod 770 install.sh && ./install.sh'
-  else
-    echo -e "\nOnly root may add a user to the system"
-  fi
+	else
+		echo -e "\nOnly root may add a user to the system"
+	fi
 else
-  echo -e "\n"
+	echo -e "\n"
 fi
 echo -e "\n${BLD}${RED} Dev Build ${BLD}${GREEN}| Done!${RESET}\n"
 
