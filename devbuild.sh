@@ -83,13 +83,13 @@ echo -e "\n${BLD}${RED} Update System ${BLD}${GREEN}| Done!${RESET}\n"
 # Install Packages
 sudo aptitude install -y \
 	build-essential git-core zip zsh safe-rm trash-cli \
-	python-software-properties python g++ make golang \
+	python-software-properties python g++ make \
 	ruby-full rubygems1.8 nmon nodejs tmux csstidy
 
 # Install Ruby Gems
 gem install compass zurb-foundation
 
-npm install -g express nodemon grunt-cli bower jshint stylus http-server
+sudo npm install -g express nodemon grunt-cli bower jshint stylus http-server
 echo -e "\n${BLD}${RED} Install Packages ${BLD}${GREEN}| Done!${RESET}\n"
 
 
@@ -120,7 +120,7 @@ echo -e "\n${BLD}${RED} Configure DNS ${BLD}${GREEN}| Done!${RESET}\n"
 
 
 # Configure srv dir
-chgrp www-data /srv
+chown itaine.www-data /srv
 chmod -R 775 /srv
 
 
