@@ -72,16 +72,16 @@ read -p "Enter hostname: " newhostname
 
 
 # Update System
-add-apt-repository -y ppa:chris-lea/node.js
-add-apt-repository -y ppa:pi-rho/dev
-aptitude update
-aptitude full-upgrade -y
+sudo add-apt-repository -y ppa:chris-lea/node.js
+sudo add-apt-repository -y ppa:pi-rho/dev
+sudo aptitude update
+sudo aptitude safe-upgrade -y
 echo -e "\n${BLD}${RED} Update System ${BLD}${GREEN}| Done!${RESET}\n"
 
 
 
 # Install Packages
-aptitude install -y \
+sudo aptitude install -y \
 	build-essential git-core zip zsh safe-rm trash-cli \
 	python-software-properties python g++ make golang \
 	ruby-full rubygems1.8 nmon nodejs tmux csstidy
