@@ -87,9 +87,9 @@ sudo aptitude install -y \
 	ruby-full rubygems1.8 nmon nodejs tmux csstidy
 
 # Install Ruby Gems
-gem install compass zurb-foundation
+# gem install compass zurb-foundation
 
-sudo npm install -g express nodemon grunt-cli bower jshint stylus http-server
+sudo npm install -g express nodemon grunt-cli bower jshint http-server
 echo -e "\n${BLD}${RED} Install Packages ${BLD}${GREEN}| Done!${RESET}\n"
 
 
@@ -118,8 +118,8 @@ DEV_HOST=`uname -n`
 echo -e "\n${BLD}${RED} Configure DNS ${BLD}${GREEN}| Done!${RESET}\n"
 
 
-
 # Configure srv dir
+
 chown itaine.www-data /srv
 chmod -R 775 /srv
 
